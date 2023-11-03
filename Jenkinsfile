@@ -72,7 +72,7 @@ pipeline{
 
       stage('Test Docker') {
       steps {
-          sh 'node --version'
+          sh 'docker --version'
       }
     }
 
