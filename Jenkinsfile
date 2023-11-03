@@ -1,52 +1,57 @@
-pipeline{  
-  environment {
-    registry = "<Your-registry-username>/node-helloworld"
-    registryCredential = '<dockerhub_credentials_id_in_jenkins>'
-    dockerImage = ''
+// Jenkinsfile
+
+pipeline {
+  agent {
+    kubernetes {
+      // this label will be the prefix of the generated pod's name
+      label 'jenkins-agent-my-app'
+      yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    component: ci
+spec:
+  containers:
+    - name: docker
+      image: docker
+      command:
+        - cat
+      tty: true
+      volumeMounts:
+        - mountPath: /var/run/docker.sock
+          name: docker-sock
+    - name: kubectl
+      image: lachlanevenson/k8s-kubectl:v1.14.0 # use a version that matches your K8s version
+      command:
+        - cat
+      tty: true
+  volumes:
+    - name: docker-sock
+      hostPath:
+        path: /var/run/docker.sock
+"""
+    }
   }
 
-  tools { nodejs "nodejs" }
-  agent { label 'master' }
-    stages {
-		stage('Test npm') {
-			steps {
-				sh """
-				npm --version
-				"""
-			}
-		}
-
-        stage('Build'){
-           steps{
-                // withNPM(npmrcConfig:'my-custom-npmrc') {
-                //     echo "Performing npm build..."
-                //     sh 'npm install'
-                // }
-              script{
-                sh 'npm install'
-              } 
-           }   
+  stages {
+    stage('Build image') {
+      steps {
+        container('docker') {
+          sh "docker build -t registry.cryptoarena.app/test-node:latest ."
+          sh "docker push registry.cryptoarena.app/test-node:latest"
         }
-        stage('Building image') {
-            steps{
-                script {
-                  dockerImage = docker.build registry + ":latest"
-                 }
-             }
-          }
-          stage('Push Image') {
-              steps{
-                  script {
-                       docker.withRegistry( '', registryCredential){                            
-                       dockerImage.push()
-                      }
-                   }
-                } 
-           }
-           stage('Deploying into k8s'){
-            steps{
-                sh 'kubectl apply -f deployment.yml' 
-            }
-        }
+      }
     }
+
+    stage('Deploy') {
+      steps {
+        container('kubectl') {
+          sh "kubectl delete -f ./kubernetes/deployment.yaml"
+          sh "kubectl apply -f ./kubernetes/deployment.yaml"
+          sh "kubectl apply -f ./kubernetes/service.yaml"
+        }
+      }
+    }
+  }
 }
