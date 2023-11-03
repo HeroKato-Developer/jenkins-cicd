@@ -5,7 +5,7 @@ pipeline{
     dockerImage = ''
   }
 
-  tools { node "node" }
+  tools { nodejs "nodejs" }
   agent { label 'master' }
     stages {
 		stage('Test npm') {
