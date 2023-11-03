@@ -62,9 +62,7 @@ pipeline{
   //       docker { image 'docker' }
   //   }
 
-      agent {
-        node { image 'node' }
-    }
+      agent {        docker { image 'node' }    }
 
   stages {
 
@@ -80,14 +78,21 @@ pipeline{
     //   }
     // }
 
-    stage('Test Docker 2') {
-      steps {
-          container('docker') {
-          sh 'docker --version'
-        }
-      }
-    }
+    // stage('Test Docker 2') {
+    //   steps {
+    //       container('docker') {
+    //       sh 'docker --version'
+    //     }
+    //   }
+    // }
 
+stages {
+        stage('Build') { 
+            steps {
+                sh 'npm install' 
+            }
+        }
+        
     stage('Build image') {
       steps {
         container('docker') {
