@@ -4,8 +4,18 @@ pipeline{
     registryCredential = '<dockerhub_credentials_id_in_jenkins>'
     dockerImage = ''
   }
-  agent any
+
+  tools { nodejs "nodejs" }
+  agent { label 'master' }
     stages {
+		stage('Test npm') {
+			steps {
+				sh """
+				npm --version
+				"""
+			}
+		}
+
         stage('Build'){
            steps{
                 // withNPM(npmrcConfig:'my-custom-npmrc') {
