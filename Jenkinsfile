@@ -104,7 +104,7 @@ pipeline{
     //   steps {
     //       sh 'docker --version'
     //   }
-    }
+    // }
 
     stage('Test Docker 2') {
       steps {
