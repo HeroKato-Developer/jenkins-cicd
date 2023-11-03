@@ -1,6 +1,6 @@
 // Jenkinsfile
 
-pipeline {
+// pipeline {
 //   agent {
 //     kubernetes {
 //       // this label will be the prefix of the generated pod's name
