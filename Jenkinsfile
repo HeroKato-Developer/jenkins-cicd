@@ -63,7 +63,9 @@ pipeline{
   //   }
 
 
-  agent none
+  // agent none
+  // agent {         docker { image 'node' } }
+  agent { dockerfile true }
   stages {
 
     // stage('Test Node') {
@@ -87,18 +89,16 @@ pipeline{
     // }
 
         stage('Build') { 
-                agent {        docker { image 'node' }    }
+                
             steps {
-                        sh 'node --version'
+                sh 'node --version'
                 sh 'npm install' 
             }
         }
         
     stage('Build image') {
-            agent {        docker { image 'docker' }    }
       steps {
         container('docker') {
-
           sh "docker build -t herokatodev/test-node:latest ."
           sh "docker push herokatodev/test-node:latest"
         }
