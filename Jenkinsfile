@@ -8,9 +8,13 @@ pipeline{
     stages {
         stage('Build'){
            steps{
-              script{
-                sh 'npm install'
-              } 
+                withNPM(npmrcConfig:'my-custom-npmrc') {
+                    echo "Performing npm build..."
+                    sh 'npm install'
+                }
+            //   script{
+            //     sh 'npm install'
+            //   } 
            }   
         }
         stage('Building image') {
