@@ -94,16 +94,16 @@ pipeline{
 
   stages {
 
-    stage('Test Node') {
-      steps {
-          sh 'node --version'
-      }
-    }
+    // stage('Test Node') {
+    //   steps {
+    //       sh 'node --version'
+    //   }
+    // }
 
-    stage('Test Docker 1') {
-      steps {
-          sh 'docker --version'
-      }
+    // stage('Test Docker 1') {
+    //   steps {
+    //       sh 'docker --version'
+    //   }
     }
 
     stage('Test Docker 2') {
