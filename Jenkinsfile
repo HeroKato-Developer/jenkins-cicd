@@ -59,7 +59,7 @@
 pipeline{
 
   agent {
-        docker { image 'node' }
+        docker { image 'docker' }
 //         kubernetes {
 //       // this label will be the prefix of the generated pod's name
 //       label 'jenkins-agent-my-app'
