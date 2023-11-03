@@ -34,6 +34,31 @@
 //     }
 //   }
 
+  // stages {
+  //   stage('Build image') {
+  //     steps {
+  //       container('docker') {
+  //         sh "docker build -t herokatodev/test-node:latest ."
+  //         sh "docker push herokatodev/test-node:latest"
+  //       }
+  //     }
+  //   }
+
+  //   stage('Deploy') {
+  //     steps {
+  //       container('kubectl') {
+  //         sh "kubectl delete -f ./kubernetes/deployment.yaml"
+  //         sh "kubectl apply -f ./kubernetes/deployment.yaml"
+  //         sh "kubectl apply -f ./kubernetes/service.yaml"
+  //       }
+  //     }
+  //   }
+  // }
+// }
+
+pipeline{
+
+  agent any
   stages {
     stage('Build image') {
       steps {
