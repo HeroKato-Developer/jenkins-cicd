@@ -94,13 +94,19 @@ pipeline{
 
   stages {
 
-      stage('Test Node') {
+    stage('Test Node') {
       steps {
           sh 'node --version'
       }
     }
 
-      stage('Test Docker') {
+    stage('Test Docker 1') {
+      steps {
+          sh 'docker --version'
+      }
+    }
+
+    stage('Test Docker 2') {
       steps {
           container('docker') {
           sh 'docker --version'
