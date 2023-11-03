@@ -72,7 +72,9 @@ pipeline{
 
       stage('Test Docker') {
       steps {
+                container('docker') {
           sh 'docker --version'
+                }
       }
     }
 
