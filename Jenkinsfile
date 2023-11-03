@@ -12,9 +12,6 @@ pipeline{
                     echo "Performing npm build..."
                     sh 'npm install'
                 }
-            //   script{
-            //     sh 'npm install'
-            //   } 
            }   
         }
         stage('Building image') {
