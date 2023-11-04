@@ -1,3 +1,16 @@
+def CLUSTER_CREDENTIALS = 'kubernetes'
+def KUBECTL_POD = """
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: kubectl
+    image: lachlanevenson/k8s-kubectl:v1.15.9
+    command:
+    - cat
+    tty: true
+"""
+
 pipeline {
     environment {
     registry = "herokatodev/test-node"
@@ -6,13 +19,13 @@ pipeline {
     dockerImageLatest = ''
     }
 
-    agent {kubernetes { label 'deploy-kube'}}
+    agent any
     stages {
-            stage('Cloning our Git') {
-                steps {
-                  git 'git@github.com:HeroKato-Developer/jenkins-cicd.git'
-                }
-            }
+            // stage('Cloning our Git') {
+            //     steps {
+            //       git 'git@github.com:HeroKato-Developer/jenkins-cicd.git'
+            //     }
+            // }
 
           stage('Build') {  
             // agent { dockerfile true }          
@@ -52,22 +65,13 @@ pipeline {
                   sh "docker rmi --force $registry:latest"
                 }
             }
-
-            stage('Deploying React.js container to Kubernetes') {
-              steps {
-                script {
-                  kubernetesDeploy(configs: "./kubernetes/deploy.yaml")
-                }
-              }
-            }
             
-            // stage('Kubernetes') {
-            //     // agent any
-            //     steps{
-            //       sh "kubectl delete -f ./kubernetes/deploy.yaml"
-            //       sh "kubectl apply -f ./kubernetes/deploy.yaml"
-            //     }
-            // }
+            stage('Kubernetes') {
+                // agent any
+                steps{
+                  sh "kubernetes/restart.sh"
+                }
+            }
         }
     }
 
