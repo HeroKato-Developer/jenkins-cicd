@@ -69,7 +69,7 @@ pipeline {
             stage('Kubernetes') {
                 // agent any
                 steps{
-                  sh "sudo kubernetes/restart.sh"
+                  sh "kubernetes/restart.sh"
                 }
             }
         }
