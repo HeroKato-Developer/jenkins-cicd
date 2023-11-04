@@ -6,8 +6,7 @@ pipeline {
     dockerImageLatest = ''
     }
 
-    // agent any
-    agent { dockerfile true }
+    agent none
     stages {
             // stage('Cloning our Git') {
             //     steps {
@@ -15,14 +14,16 @@ pipeline {
             //     }
             // }
 
-          // stage('Build') {            
-          //   steps {
-          //           sh 'node --version'
-          //           sh 'npm install' 
-          //       }
-          //   }
+          stage('Build') {  
+            agent { dockerfile true }          
+            steps {
+                    sh 'node --version'
+                    sh 'npm install' 
+                }
+            }
 
             stage('Building Docker Image') {
+                agent any
                 steps {
                     script {
                         dockerImage = docker.build registry + ":$BUILD_NUMBER"
@@ -32,6 +33,7 @@ pipeline {
             }
 
             stage('Deploying Docker Image to Dockerhub') {
+                agent any
                 steps {
                     script {
                         docker.withRegistry('', registryCredential) {
@@ -43,6 +45,7 @@ pipeline {
             }
 
             stage('Cleaning Up') {
+                agent any
                 steps{
                   sh "docker rmi --force $registry:$BUILD_NUMBER"
                   sh "docker rmi --force $registry:latest"
