@@ -6,13 +6,13 @@ pipeline {
     dockerImageLatest = ''
     }
 
-    agent any
+    agent {kubernetes { label 'deploy-kube'}}
     stages {
-            // stage('Cloning our Git') {
-            //     steps {
-            //     git 'git@github.com:HeroKato-Developer/jenkins-cicd.git'
-            //     }
-            // }
+            stage('Cloning our Git') {
+                steps {
+                  git 'git@github.com:HeroKato-Developer/jenkins-cicd.git'
+                }
+            }
 
           stage('Build') {  
             // agent { dockerfile true }          
