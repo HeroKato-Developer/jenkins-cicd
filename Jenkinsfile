@@ -1,16 +1,3 @@
-def CLUSTER_CREDENTIALS = 'kubernetes'
-def KUBECTL_POD = """
-apiVersion: v1
-kind: Pod
-spec:
-  containers:
-  - name: kubectl
-    image: lachlanevenson/k8s-kubectl:v1.15.9
-    command:
-    - cat
-    tty: true
-"""
-
 pipeline {
     environment {
     registry = "herokatodev/test-node"
@@ -21,14 +8,8 @@ pipeline {
 
     agent any
     stages {
-            // stage('Cloning our Git') {
-            //     steps {
-            //       git 'git@github.com:HeroKato-Developer/jenkins-cicd.git'
-            //     }
-            // }
 
-          stage('Build') {  
-            // agent { dockerfile true }          
+          stage('Build') {      
             steps {
                     echo 'finish Build'
                     // sh 'node --version'
@@ -37,11 +18,10 @@ pipeline {
             }
 
             stage('Building Docker Image') {
-                // agent any
                 steps {
                     script {
                         dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                        dockerImageLatest = docker.build registry + ":latest"
+                        dockerImageLatest = docker.tag "$registry:$BUILD_NUMBER" "$registry:latest"
                     }
                 }
             }
