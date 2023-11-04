@@ -17,8 +17,9 @@ pipeline {
           stage('Build') {  
             agent { dockerfile true }          
             steps {
-                    sh 'node --version'
-                    sh 'npm install' 
+                    echo 'finish Build'
+                    // sh 'node --version'
+                    // sh 'npm install' 
                 }
             }
 
