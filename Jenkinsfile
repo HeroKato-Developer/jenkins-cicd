@@ -6,7 +6,8 @@ pipeline {
     dockerImageLatest = ''
     }
 
-    agent any
+    // agent any
+    agent { dockerfile true }
     stages {
             // stage('Cloning our Git') {
             //     steps {
@@ -14,11 +15,7 @@ pipeline {
             //     }
             // }
 
-          stage('Build') {   
-            agent { 
-              dockerfile true 
-              reuseNode true
-             }              
+          stage('Build') {            
             steps {
                     sh 'node --version'
                     sh 'npm install' 
