@@ -7,11 +7,11 @@ pipeline {
 
     agent any
     stages {
-            stage('Cloning our Git') {
-                steps {
-                git 'git@github.com:HeroKato-Developer/jenkins-cicd.git'
-                }
-            }
+            // stage('Cloning our Git') {
+            //     steps {
+            //     git 'git@github.com:HeroKato-Developer/jenkins-cicd.git'
+            //     }
+            // }
 
             stage('Building Docker Image') {
                 steps {
