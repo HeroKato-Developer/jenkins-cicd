@@ -21,7 +21,7 @@ pipeline {
                 steps {
                     script {
                         dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                        dockerImageLatest = docker.tag "$registry:$BUILD_NUMBER" "$registry:latest"
+                        dockerImageLatest = dockerImage.tag("$registry:latest")
                     }
                 }
             }
