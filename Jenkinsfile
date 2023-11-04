@@ -65,7 +65,12 @@ pipeline{
 
   // agent none
   // agent {         docker { image 'node' } }
+  // agent { dockerfile true }
   agent any
+  tools {nodejs "node"}
+  tools {docker "docker"}
+  tools {kubectl "kubectl"}
+
   stages {
 
     // stage('Test Node') {
