@@ -1,0 +1,1 @@
+sshpass -p 'kato00ftw' ssh -o StrictHostKeyChecking=no kato@cryptoarena.app "microk8s kubectl rollout restart -n devs-ops deployment test-node"
