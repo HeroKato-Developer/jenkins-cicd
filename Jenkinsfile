@@ -78,6 +78,7 @@ pipeline {
                 // agent any
                 steps{
                   sh "microk8s status"
+                  sh "microk8s kubectl rollout restart -n devops-tools deployment test-node"
                 }
             }
         }
