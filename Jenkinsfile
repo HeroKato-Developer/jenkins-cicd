@@ -15,7 +15,10 @@ pipeline {
             // }
 
           stage('Build') {   
-            agent { dockerfile true }              
+            agent { 
+              dockerfile true 
+              reuseNode true
+             }              
             steps {
                     sh 'node --version'
                     sh 'npm install' 
