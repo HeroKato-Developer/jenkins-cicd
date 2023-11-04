@@ -1,50 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: rgs-deployment
+    name: test-node
     namespace: devops-tools
     labels:
-        app: rgs-server
+        app: test-node
 spec:
     replicas: 1
     minReadySeconds: 10
     selector:
         matchLabels:
-            app: rgs-server
+            app: test-node
     template:
         metadata:
             labels:
-                app: rgs-server
+                app: test-node
         spec:
             containers:
-                - name: rgs-server
+                - name: test-node
                   imagePullPolicy: Always
-                  image: herokato/test-node:latest
+                  image: herokatodev/test-node:latest
 
                   ports:
                       - containerPort: 8000
-
----
-apiVersion: v1
-kind: Service
-metadata:
-    name: rgs-server-svc
-    namespace: devops-tools
-spec:
-    selector:
-        app: rgs-server
-    ports:
-        - protocol: TCP
-          port: 3000
-          targetPort: 8000
-# ---
-# kind: Service
-# apiVersion: v1
-# metadata:
-#     name: rgs-server-svc-ext
-#     namespace: duel
-# spec:
-#     type: ExternalName
-#     externalName: rgs-server-svc.crypto.svc.cluster.local
-#     ports:
-#         - port: 3000
