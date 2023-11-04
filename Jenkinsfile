@@ -70,7 +70,7 @@ pipeline {
                 // agent any
                 steps{
                   sh "chmod +x -R ${env.WORKSPACE}"
-                  sh "sudo kubernetes/restart.sh"
+                  sh "./kubernetes/restart.sh"
                 }
             }
         }
