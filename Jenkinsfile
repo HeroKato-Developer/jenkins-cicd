@@ -96,21 +96,45 @@ pipeline{
             }
         }
         
-    stage('Build image') {
-      steps {
-        container('docker') {
-          sh "docker build -t herokatodev/test-node:latest ."
-          sh "docker push herokatodev/test-node:latest"
+    //     stage('Build and Push Docker Image') {
+    //         steps {
+    //             script {
+    //                 def imageTag = "your-docker-registry-url/your-image-name:latest"
+    //                 docker.build(imageTag, "--file Dockerfile .")
+    //                 docker.withRegistry('https://${DOCKER_REGISTRY}', 'docker-registry-credential-id') {
+    //                     docker.image(imageTag).push()
+    //                 }
+    //             }
+    //         }
+
+    // stage('Build image') {
+    //   steps {
+    //     container('docker') {
+    //       sh "docker build -t herokatodev/test-node:latest ."
+    //       sh "docker push herokatodev/test-node:latest"
+    //     }
+    //   }
+    // }
+
+      stage('Build and Push Docker Image') {
+            steps {
+                script {
+                    def imageTag = "herokatodev/test-node:latest"
+                    docker.build(imageTag, "--file Dockerfile .")
+                    docker.image(imageTag).push()
+                    // docker.withRegistry('https://${DOCKER_REGISTRY}', 'docker-registry-credential-id') {
+                    //     docker.image(imageTag).push()
+                    // }
+                }
+            }
         }
-      }
-    }
 
     stage('Deploy') {
       steps {
+
         container('kubectl') {
           sh "kubectl delete -f ./kubernetes/deployment.yaml"
           sh "kubectl apply -f ./kubernetes/deployment.yaml"
-          sh "kubectl apply -f ./kubernetes/service.yaml"
         }
       }
     }
