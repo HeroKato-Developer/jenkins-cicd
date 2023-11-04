@@ -65,7 +65,7 @@ pipeline{
 
   // agent none
   // agent {         docker { image 'node' } }
-  agent { dockerfile true }
+  agent any
   stages {
 
     // stage('Test Node') {
