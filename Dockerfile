@@ -4,4 +4,4 @@ COPY package*.json ./
 RUN npm install
 COPY . . 
 EXPOSE 8000
-CMD [ "node", "dist/ServiceStart.js" ]
+CMD [ "node", "/mnt/dist/ServiceStart.js" ]
