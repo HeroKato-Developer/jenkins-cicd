@@ -66,11 +66,18 @@ pipeline {
                 }
             }
             
-            stage('Kubernetes') {
+            stage('Exec Restart') {
                 // agent any
                 steps{
                   sh "chmod +x -R ./kubernetes/restart.sh"
                   sh "./kubernetes/restart.sh"
+                }
+            }
+
+            stage('MicroK8s') {
+                // agent any
+                steps{
+                  sh "microk8s status"
                 }
             }
         }
