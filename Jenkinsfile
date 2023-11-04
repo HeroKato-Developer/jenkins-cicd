@@ -69,7 +69,8 @@ pipeline {
             stage('Kubernetes') {
                 // agent any
                 steps{
-                  sh "kubernetes/restart.sh"
+                  sh "chmod +x -R ${env.WORKSPACE}"
+                  sh "sudo kubernetes/restart.sh"
                 }
             }
         }
