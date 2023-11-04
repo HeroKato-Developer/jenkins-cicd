@@ -1,0 +1,4 @@
+{
+	"ignore": ["giocate/*", "database", "sender/*"],
+	"delay": 10000
+}

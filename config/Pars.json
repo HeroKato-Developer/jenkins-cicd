@@ -1,0 +1,88 @@
+{
+    "globalscatter": 3,
+    "randomscatter": 10,
+    "randommaxscatter": 100,
+    "payoutlimiter": 10000,
+
+    "normal": {
+        "poolsize": 3,
+        "sceltapars":9992,
+        "probSpecialEnter":1500,
+        "probSingleSpecialEnter":1300,
+		"pars": [
+            {
+                "id": 0,
+                "quantity": [14, 14, 14, 14, 14]
+            },
+            {
+                "id": 1,
+                "quantity": [14, 14, 14, 14, 14]
+            },
+            {
+                "id": 2,
+                "quantity": [12, 12, 12, 12, 12]
+            },
+            {
+                "id": 3,
+                "quantity": [12, 12, 12, 12, 12]
+            },
+            {
+                "id": 4,
+                "quantity": [10, 10, 10, 10, 10]
+            },
+            {
+                "id": 5,
+                "quantity": [10, 10, 10, 10, 10]
+            },
+            {
+                "id": 6,
+                "quantity": [8, 8, 8, 8, 8]
+            },
+            {
+                "id": 7,
+                "quantity": [8, 8, 8, 8, 8]
+            },
+            {
+                "id": 8,
+                "quantity": [6, 6, 6, 6, 6]
+            },
+            {
+                "id": 9,
+                "quantity": [6, 6, 6, 6, 6]
+            },
+			{
+				"id": 10,
+				"quantity": [0, 0, 0, 0, 0]
+			},
+            {
+                "id": 11,
+                "quantity": [0, 0, 0, 0, 0]
+            }
+		]
+    },
+    "freespin": {
+        "poolsize": 3,
+        "sceltapars": 0,
+        "probWin":10000,
+        "probXLose":650,
+        "id11Number":4,
+        "pars": [
+			{
+				"id": 12,
+				"quantity": [4, 4, 4, 4, 4]
+			},
+			{
+				"id": 13,
+				"quantity": [14, 14, 14, 14, 14]
+			},
+			{
+				"id": 14,
+				"quantity": [14, 14, 14, 14, 14]
+			},
+			{
+				"id": 15,
+				"quantity": [14, 14, 14, 14, 14]
+			}
+		]
+    }
+}

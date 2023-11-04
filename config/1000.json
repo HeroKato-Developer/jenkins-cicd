@@ -1,0 +1,923 @@
+{
+	"gameid": "game_aladdin_EVG",
+	"gamename": "aladdin",
+	"gameproviderid": "EVG",
+	"rulli": {
+		"default": [
+			[0, 1, 2, 3, 4],
+			[0, 1, 2, 3, 4],
+			[0, 1, 2, 3, 4],
+			[0, 1, 2, 3, 4],
+			[0, 1, 2, 3, 4]
+		],
+		"normal": {
+			"simboli": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+			"rotazione": [
+                1, 1, 1, 7, 7, 7, 7, 2, 11, 5, 5, 0, 0, 0, 0, 10, 1, 1, 9, 0, 0, 0, 0,
+                2, 2, 2, 2, 2, 11, 2, 2, 0, 8, 8, 7, 7, 7, 2, 2, 2, 2, 7, 7, 0, 0, 0, 0,
+                0, 0, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 11, 10, 5, 1, 1, 1, 4, 1, 1, 1,
+                8, 8, 5, 5, 1, 1, 1, 5, 5, 5, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 10, 1, 1, 1,
+                1, 3, 3, 3, 3, 2, 2, 2, 2, 4, 4, 4, 4, 2, 2, 2, 7, 4, 4, 4, 4, 2, 2, 0,
+                0, 0, 5, 1, 1, 1, 0, 0, 1, 1, 1, 1, 11, 0, 0, 1, 5, 5, 5, 7, 7, 7, 4, 4,
+                4, 4, 8, 3, 3, 3, 3, 4, 4, 4, 4, 2, 2, 2, 2, 5, 5, 2, 2, 2, 0, 0, 6, 6,
+                1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 5, 2, 2, 2, 2, 0, 0, 0, 2, 2, 2, 8, 8, 8,
+                2, 2, 2, 2, 0, 4, 8, 8, 8, 8, 0, 0, 0, 0, 1, 1, 1, 1, 11, 6, 1, 7, 7, 7,
+                7, 7, 7, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 4, 4, 4, 4, 0, 0, 10, 1, 1, 1, 1,
+                0, 1, 1, 3, 3, 3, 3, 8, 8, 2, 2, 2
+            ],
+			"animazione": {
+				"normal": {
+					"startWait": 0.3,
+					"stopWait": 0.3,
+					"minWait": 0,
+
+					"speed": 6000,
+					"alignTime": 0.4,
+
+					"startBounceUp": 20,
+					"startBounceUpTime": 0.1,
+					"startBounceUpEasing": "quadOut",
+
+					"startBounceSetTime": 0.1,
+					"startBounceSetEasing": "quadIn",
+
+					"endBounceDown": 40,
+					"endBounceDownTime": 0.1,
+					"endBounceDownEasing": "quadOut",
+
+					"endBounceUp": 0,
+					"endBounceUpTime": 0.1,
+					"endBounceUpEasing": "quadOut",
+
+					"endBounceSetTime": 0.1,
+					"endBounceSetEasing": "quadOut"
+				},
+				"quick": {
+					"startWait": 0.2,
+					"stopWait": 0.2,
+					"minWait": 0,
+
+					"speed": 6000,
+					"alignTime": 0.3,
+
+					"startBounceUp": 10,
+					"startBounceUpTime": 0.1,
+					"startBounceUpEasing": "quadOut",
+
+					"startBounceSetTime": 0.1,
+					"startBounceSetEasing": "quadIn",
+
+					"endBounceDown": 20,
+					"endBounceDownTime": 0.1,
+					"endBounceDownEasing": "quadOut",
+
+					"endBounceUp": 0,
+					"endBounceUpTime": 0.1,
+					"endBounceUpEasing": "quadOut",
+
+					"endBounceSetTime": 0.1,
+					"endBounceSetEasing": "quadOut"
+				},
+				"turbo": {
+					"startWait": 0,
+					"stopWait": 0,
+					"minWait": 0.5,
+
+					"speed": 8000,
+					"alignTime": 0,
+
+					"startBounceUp": 50,
+					"startBounceUpTime": 0.1,
+					"startBounceUpEasing": "quadOut",
+
+					"startBounceSetTime": 0.1,
+					"startBounceSetEasing": "quadIn",
+
+					"endBounceDown": 50,
+					"endBounceDownTime": 0.1,
+					"endBounceDownEasing": "quadOut",
+
+					"endBounceUp": 0,
+					"endBounceUpTime": 0.1,
+					"endBounceUpEasing": "quadOut",
+
+					"endBounceSetTime": 0.1,
+					"endBounceSetEasing": "quadOut"
+				},
+				"suspance": {
+					"speed": 7000,
+					"alignTime": 0.2,
+					"rollingTime": 0.7,
+					"waitTime": 0.45,
+
+					"endBounceDown": 40,
+					"endBounceDownTime": 0.1,
+					"endBounceDownEasing": "quadOut",
+
+					"endBounceUp": 0,
+					"endBounceUpTime": 0.1,
+					"endBounceUpEasing": "quadOut",
+
+					"endBounceSetTime": 0.1,
+					"endBounceSetEasing": "quadOut"
+				}
+			}
+		},
+		"freespin": {
+			"simboli": [12, 13, 14, 15],
+			"rotazione": [12, 13, 14, 15, 15, 12, 14, 13, 12, 13, 15 ,14, 12, 14, 13, 13, 13, 12, 12, 12, 15, 15, 14, 14, 14],
+			"animazione": {
+				"normal": {
+					"startWait": 0.3,
+					"stopWait": 0.3,
+					"minWait": 0,
+
+					"speed": 6000,
+					"alignTime": 0.4,
+
+					"startBounceUp": 20,
+					"startBounceUpTime": 0.1,
+					"startBounceUpEasing": "quadOut",
+
+					"startBounceSetTime": 0.1,
+					"startBounceSetEasing": "quadIn",
+
+					"endBounceDown": 40,
+					"endBounceDownTime": 0.1,
+					"endBounceDownEasing": "quadOut",
+
+					"endBounceUp": 0,
+					"endBounceUpTime": 0.1,
+					"endBounceUpEasing": "quadOut",
+
+					"endBounceSetTime": 0.1,
+					"endBounceSetEasing": "quadOut"
+				},
+				"quick": {
+					"startWait": 0.2,
+					"stopWait": 0.2,
+					"minWait": 0,
+
+					"speed": 6000,
+					"alignTime": 0.3,
+
+					"startBounceUp": 10,
+					"startBounceUpTime": 0.1,
+					"startBounceUpEasing": "quadOut",
+
+					"startBounceSetTime": 0.1,
+					"startBounceSetEasing": "quadIn",
+
+					"endBounceDown": 20,
+					"endBounceDownTime": 0.1,
+					"endBounceDownEasing": "quadOut",
+
+					"endBounceUp": 0,
+					"endBounceUpTime": 0.1,
+					"endBounceUpEasing": "quadOut",
+
+					"endBounceSetTime": 0.1,
+					"endBounceSetEasing": "quadOut"
+				},
+				"turbo": {
+					"startWait": 0,
+					"stopWait": 0,
+					"minWait": 0.5,
+
+					"speed": 8000,
+					"alignTime": 0,
+
+					"startBounceUp": 50,
+					"startBounceUpTime": 0.1,
+					"startBounceUpEasing": "quadOut",
+
+					"startBounceSetTime": 0.1,
+					"startBounceSetEasing": "quadIn",
+
+					"endBounceDown": 50,
+					"endBounceDownTime": 0.1,
+					"endBounceDownEasing": "quadOut",
+
+					"endBounceUp": 0,
+					"endBounceUpTime": 0.1,
+					"endBounceUpEasing": "quadOut",
+
+					"endBounceSetTime": 0.1,
+					"endBounceSetEasing": "quadOut"
+				},
+				"suspance": {
+					"speed": 7000,
+					"alignTime": 0.2,
+					"rollingTime": 0.7,
+					"waitTime": 0.45,
+
+					"endBounceDown": 40,
+					"endBounceDownTime": 0.1,
+					"endBounceDownEasing": "quadOut",
+
+					"endBounceUp": 0,
+					"endBounceUpTime": 0.1,
+					"endBounceUpEasing": "quadOut",
+
+					"endBounceSetTime": 0.1,
+					"endBounceSetEasing": "quadOut"
+				}
+			}
+		}
+	},
+	"wins": [
+		{
+			"id": "Recap",
+			"threshold": 0,
+			"animation": "win"
+		},
+		{
+			"id": "Mid Win",
+			"threshold": 10,
+			"animation": "midwin"
+		},
+		{
+			"id": "Big Win",
+			"threshold": 25,
+			"animation": "bigwin"
+		},
+		{
+			"id": "Super Win",
+			"threshold": 50,
+			"animation": "superwin"
+		},
+		{
+			"id": "Mega Win",
+			"threshold": 100,
+			"animation": "megawin"
+		},
+		{
+			"id": "Epic Win",
+			"threshold": 500,
+			"animation": "epicwin"
+		}
+	],
+	"audio": [
+		{
+			"id": "0",
+			"threshold": 0
+		},
+		{
+			"id": "1",
+			"threshold": 5
+		},
+		{
+			"id": "2",
+			"threshold": 10
+		},
+		{
+			"id": "3",
+			"threshold": 15
+		},
+		{
+			"id": "4",
+			"threshold": 25
+		},
+		{
+			"id": "5",
+			"threshold": 40
+		},
+		{
+			"id": "6",
+			"threshold": 55
+		},
+		{
+			"id": "7",
+			"threshold": 70
+		},
+		{
+			"id": "8",
+			"threshold": 100
+		}
+	],
+	"language": [
+		{
+            "Keys": "NONE",
+            "it": "",
+            "en": ""
+        },
+        {
+            "Keys": "FIXED_Single",
+            "it": "{0}",
+            "en": "{0}"
+        },
+        {
+            "Keys": "FIXED_Double",
+            "it": "{0} {1}",
+            "en": "{0} {1}"
+        },
+        {
+            "Keys": "FIXED_Triple",
+            "it": "{0} {1} {2}",
+            "en": "{0} {1} {2}"
+        },
+        {
+            "Keys": "FIXED_Quad",
+            "it": "{0} {1} {2} {3}",
+            "en": "{0} {1} {2} {3}"
+        },
+        {
+            "Keys": "MISC_Yes",
+            "it": "Si",
+            "en": "Yes"
+        },
+        {
+            "Keys": "MISC_No",
+            "it": "No",
+            "en": "No"
+        },
+		{
+			"Keys": "UI_GameName",
+			"it": "ALADDIN",
+			"en": "ALADDIN"
+		},
+		{
+			"Keys": "UI_GameName_Date",
+			"it": "{0} ALADDIN",
+			"en": "{0} ALADDIN"
+		},
+		{
+            "Keys": "UI_CoinBet",
+            "it": "GETTONI PER PUNTATA {0}",
+            "en": "COIN PER BET {0}"
+        },
+        {
+            "Keys": "UI_Bet",
+            "it": "PUNTATA {0} {1}",
+            "en": "BET {0} {1}"
+        },
+        {
+            "Keys": "UI_Balance",
+            "it": "{0} {1} {2}",
+            "en": "{0} {1} {2}"
+        },
+        {
+            "Keys": "UI_Balance_Net",
+            "it": "{0} {1} / {2} {3}",
+            "en": "{0} {1} / {2} {3}"
+        },
+        {
+            "Keys": "UI_Test",
+            "it": "Test",
+            "en": "Test"
+        },
+        {
+            "Keys": "UI_TestParam",
+            "it": "Test {0}",
+            "en": "Test {0}"
+        },
+        {
+            "Keys": "UI_TestParams",
+            "it": "Test {0} di {1}",
+            "en": "Test {0} di {1}"
+        },
+        {
+            "Keys": "UI_Win",
+            "it": "Hai Vinto: {0} {1}",
+            "en": "Win: {0} {1}"
+        },
+        {
+            "Keys": "HISTORY_Title",
+            "it": "Storico",
+            "en": "History"
+        },
+		{
+            "Keys": "HISTORY_GameID",
+            "it": "TransazioneID: {0}",
+            "en": "TransactionID: {0}"
+        },
+        {
+            "Keys": "HISTORY_TimeStamp",
+            "it": "Data: {0}",
+            "en": "Date: {0}"
+        },
+        {
+            "Keys": "HISTORY_Bet",
+            "it": "Puntata: {0} {1}",
+            "en": "Bet: {0} {1}"
+        },
+        {
+            "Keys": "HISTORY_Win",
+            "it": "Vincita: {0} {1}",
+            "en": "Win: {0} {1}"
+        },
+        {
+            "Keys": "HISTORY_Type",
+            "it": "Tipologia: {0}",
+            "en": "Typology: {0}"
+        },
+        {
+            "Keys": "HISTORY_Tiri",
+            "it": "Tiri: {0}",
+            "en": "Spin: {0}"
+        },
+        {
+            "Keys": "HISTORY_CurrentSpin",
+            "it": "Tiro Attuale: {0}",
+            "en": "Current spin: {0}"
+        },
+        {
+            "Keys": "HISTORY_MaxSpin",
+            "it": "Numero Tiri: {0}",
+            "en": "Max spin: {0}"
+        },
+        {
+            "Keys": "SETTINGS_Settings",
+            "it": "IMPOSTAZIONI",
+            "en": "SETTINGS"
+        },
+		{
+            "Keys": "SETTINGS_Sounds",
+            "it": "Suoni",
+            "en": "Sound"
+        },
+        {
+            "Keys": "SETTINGS_Sfx",
+            "it": "Effetti Sonori",
+            "en": "Sound effects"
+        },
+        {
+            "Keys": "SETTINGS_Music",
+            "it": "Musica",
+            "en": "Music"
+        },
+        {
+            "Keys": "SETTINGS_QuickPlay",
+            "it": "Giocata Veloce",
+            "en": "Quick play"
+        },
+        {
+            "Keys": "SETTINGS_TurboPlay",
+            "it": "Giocata Turbo",
+            "en": "Turbo play"
+        },
+        {
+            "Keys": "SETTINGS_ShowCoin",
+            "it": "Visualizza Gettoni",
+            "en": "Show coin"
+        },
+        {
+            "Keys": "SETTINGS_Volume",
+            "it": "Volume",
+            "en": "Volume"
+        },
+        {
+            "Keys": "SETTINGS_Timers",
+            "it": "Tempi",
+            "en": "Timers"
+        },
+        {
+            "Keys": "SETTINGS_TimersTitle",
+            "it": "TEMPI",
+            "en": "TIMERS"
+        },
+		{
+            "Keys": "SETTINGS_Away",
+            "it": "Verifica Inattività: {0} minuti",
+            "en": "Away check: {0} minutes"
+        },
+        {
+            "Keys": "SETTINGS_Reality",
+            "it": "Verifica Robot: {0} minuti",
+            "en": "Authentication check: {0} minutes"
+        },
+        {
+            "Keys": "SETTINGS_Set",
+            "it": "Imposta",
+            "en": "Set"
+        },
+        {
+            "Keys": "AUTOPLAY_Autoplay",
+            "it": "GIOCO AUTOMATICO",
+            "en": "AUTOPLAY"
+        },
+        {
+            "Keys": "AUTOPLAY_Games",
+            "it": "Partite: {0}",
+            "en": "Spin: {0}"
+        },
+        {
+            "Keys": "AUTOPLAY_Play",
+            "it": "Gioca",
+            "en": "Play"
+        },
+        {
+            "Keys": "BET_Bet",
+            "it": "PUNTATA",
+            "en": "BET"
+        },
+        {
+            "Keys": "BET_BetValue",
+            "it": "PUNTATA",
+            "en": "BET"
+        },
+        {
+            "Keys": "BET_CoinValue",
+            "it": "VALORE GETTONE",
+            "en": "COIN VALUE"
+        },
+		{
+            "Keys": "BET_TotalBet",
+            "it": "PUNTATA TOTALE",
+            "en": "TOTAL BET"
+        },
+        {
+            "Keys": "TAVOLA_Congratulations",
+            "it": "Congratulazioni",
+            "en": "Congratulations"
+        },
+        {
+            "Keys": "TAVOLA_YouWon",
+            "it": "Hai Vinto",
+            "en": "You won"
+        },
+        {
+            "Keys": "TAVOLA_YouRecovered",
+            "it": "Hai Recuperato",
+            "en": "You recovered"
+        },
+        {
+            "Keys": "TAVOLA_FreeSpins",
+            "it": "Giri Gratis",
+            "en": "Free Spin"
+        },
+        {
+            "Keys": "TAVOLA_Special",
+            "it": "Speciale",
+            "en": "Special"
+        },
+        {
+            "Keys": "TAVOLA_Symbol",
+            "it": "Simbolo",
+            "en": "Symbol"
+        },
+        {
+            "Keys": "TAVOLA_Recap_FS",
+            "it": "in {0} Giri Gratis",
+            "en": "in {0} Free spin"
+        },
+        {
+            "Keys": "TAVOLA_Recap_BN",
+            "it": "in {0} Colpi",
+            "en": "in {0} Try"
+        },
+		{
+            "Keys": "TAVOLA_FreeSpins_FS",
+            "it": "Giri Gratis",
+            "en": "Free spin"
+        },
+        {
+            "Keys": "TAVOLA_FreeSpins_BN",
+            "it": "Colpi",
+            "en": "Try"
+        },
+        {
+            "Keys": "TAVOLA_Counter",
+            "it": "Giri",
+            "en": "Counter"
+        },
+        {
+            "Keys": "TAVOLA_PressKey",
+            "it": "Premi ovunque per continuare",
+            "en": "Press everywhere to continue"
+        },
+        {
+            "Keys": "ERROR_Title",
+            "it": "Errore",
+            "en": "Error"
+        },
+        {
+            "Keys": "ERROR_Description",
+            "it": "Errore inaspettato. Per favore ricarica il gioco",
+            "en": "Unexpected error. Reload the game please"
+        },
+        {
+            "Keys": "AWAY_Title",
+            "it": "VERIFICA PRESENZA",
+            "en": "AWAY CHECK"
+        },
+        {
+            "Keys": "AWAY_Description",
+            "it": "Sei ancora qua?",
+            "en": "Are you here?"
+        },
+        {
+            "Keys": "ROBOT_Title",
+            "it": "VERIFICA UTENTE",
+            "en": "USER CHECK"
+        },
+		{
+            "Keys": "ROBOT_Description",
+            "it": "Sei tu il proprietario dell' account?"
+        },
+        {
+            "Keys": "FREE_Tiri",
+            "it": "Giri",
+            "en": "Spin"
+        },
+        {
+            "Keys": "FREE_Special",
+            "it": "Speciale",
+            "en": "Special"
+        },
+		{
+			"Keys": "RULE_0",
+			"it": "Aladdin è una slot con 5 rulli, 3 righe e 15 linee di pagamento.",
+			"en": "Aladdin is a slot with 5 reels, 3 row each and 15 active paylines."
+		},
+		{
+			"Keys": "RULE_1",
+			"it": "La puntata minima e' di € 0.10, la puntata massima e' di € 10.",
+			"en": "Minimum bet is €0.10, maximum bet is €10."
+		},
+		{
+            "Keys": "RULE_2",
+            "it": "Le vincite sono ottenute se al termine dello spin sono presenti almeno tre simboli identici in successione, a partire dal primo rullo di sinistra verso destra, posizionati su una delle linee di vincita.",
+            "en": "All winnning begin with the leftmost reel and pay left to right only on consecutive reels."
+        },
+        {
+            "Keys": "RULE_3",
+            "it": "Viene pagata solo la vincita maggiore per linea di pagamento.",
+            "en": "Only the highest win per active payline is paid out."
+        },
+        {
+            "Keys": "RULE_4",
+            "it": "La giocata comincia quando il giocatore preme il tasto Spin con la puntata selezionata in quel momento.",
+            "en": "A game round start on the selected bet level when the player hits the Spin button."
+        },
+		{
+            "Keys": "RULE_5",
+            "it": "Le giocate possono essere eseguite automaticamente attivando la funzione Auto Spin (se disponibile nella giurisdizione da dove viene eseguito il gioco). Il tasto Auto Spin permette di impostare il numero di giocate da eseguire automaticamente.",
+            "en": "The game can be played automatically by activating Auto Spin. Use the Auto Spin button to set the number of game rounds to be played automatically."
+        },
+        {
+            "Keys": "RULE_6",
+            "it": "Le vincite e le combinazioni vincenti vengono pagate secondo le regole descritte nella Tabella dei pagamenti.",
+            "en": "Winnings and winning combination are paid out according to the Paytable."
+        },
+        {
+            "Keys": "RULE_7",
+            "it": "Accedendo al Menu di Setup e' possibile attivare la Giocata Veloce o la Giocata Turbo. La Giocata Veloce avra' un tempo di spin piu' corto della Giocata Normale, la Giocata Turbo avra' un tempo di spin piu' corto della Giocata Veloce. Entrambe le giocate Veloce e Turbo non mostreranno suspance durante lo svolgimento degli spin.",
+            "en": "In the Settings menu is possible to activate the Quick Spin or Turbo Spin. Quick Spin is faster than Normal Spin and Turbo Spin is faster than Quick Spin."
+        },
+        {
+            "Keys": "RULE_8",
+            "it": "Una giocata ad Aladdin puo svolgersi in due modalita': la modalita' Normale e la modalita' Free Spin.",
+            "en": "Aladdin has two game mode, Normal mode and Free Spin mode."
+        },
+        {
+            "Keys": "RULE_9",
+            "it": "La giocata inizia sempre dalla modalita' Normale, prosegue eventualemtne nelle modalita' Free Spin qualora si verificassero le relative condizioni di attivazione .",
+		    "en": "Every spin start with the Normal mode, eventually the Free Spin mode will trigger."
+        },
+        {
+            "Keys": "RULE_10",
+            "it": "Il simbolo WILD, compare sia nella modalita' di gioco Normale che Free Spin, sostituisce tutti i simboli ad eccezione dei simboli SCATTER e LAMPADA.",
+            "en": "The WILD symbol, substitute every other pay symbols, do not substitute SCATTER and LAMP symbols."
+        },
+		{
+			"Keys": "RULE_11",
+			"it": "Il simbolo LAMPADA non paga seguendo le combinazioni vincenti/linee di pagamento e non sostituisce nessun simbolo",
+			"en": "The LAMP symbol do not follow any winning combinations/paylines rules and do not sobstitute any other symbols"
+		},
+		{
+			"Keys": "RULE_12",
+			"it": "A seconda del numero di simboli LAMPADA presenti a schermo viene assegnata una vincita istantanea elecata nella Tabella dei Pagamenti",
+			"en": "An instant win will be assigned, according to, how many LAMP symbols are present on screen"
+		},
+		{
+			"Keys": "RULE_13",
+			"it": "Se al termine di una giocata, nella modalita' di gioco Normale, sono presenti 3 simboli SCATTER, viene attivata la modalita' Free Spin assegnando 3 tiri gratuiti.",
+			"en": "Free Spin mode is triggered when 3 SCATTER symbols are present in the Normal mode and trigger 3 free spins."
+		},
+		{
+			"Keys": "RULE_14",
+			"it": "Nella fase Free Spin i simboli PAGANTI, WILD e SCATTER sono disabilitati.",
+			"en": "The PAY, WILD and SCATTER symbols are disabled during the Free Spin mode."
+		},
+		{
+			"Keys": "RULE_15",
+			"it": "Il simbolo LAMPADA diventa anche un simbolo adesivo durante i Free Spin e ogni volta che ne compare almeno uno, il numero dei free spin rimanenti viene assegato a 3.",
+			"en": "The LAMP symbol became also a sticky symbol in the Free Spin mode, every time, at least, a LAMP symbol shows up the free spin counter will reset to 3."
+		},
+		{
+			"Keys": "RULE_16",
+			"it": "Al termine della fase Free Spin viene assegnata l'eventuale vincita.",
+			"en": "The eventaul win will be rewarded at the end of the Free Spin mode."
+		},
+		{
+            "Keys": "RULE_17",
+            "it": "La modalita' Free Spin si conclude quando terminano i tiri gratuiti o quando viene raggiunta la vincita massima.",
+            "en": "The Free Spin mode ends when no Free Spin remain or when the maximum win has been reached."
+        },
+		{
+			"Keys": "RULE_18",
+			"it": "Il ritorno teorico per il giocatore (RTP) e' 96.40%.",
+			"en": "The theoretical RTP is 96,40%."
+		},
+		{
+			"Keys": "RULE_19",
+			"it": "La vincita massima possibile e' di 10 000x il bet selezionato.",
+			"en": "The game has a maximum win of 10 000x placed bet."
+		},
+		{
+			"Keys": "RULE_20",
+			"it": "In caso di malfunzionamento, tutte le puntate e le vincite sono annullate.",
+			"en": "In the event of malfunction all bets and winnings are erased."
+		},
+		{
+			"Keys": "RULE_Version",
+			"it": "Version 1.0",
+			"en": "Version 1.0"
+		},
+		{
+			"Keys": "RULE_Date",
+			"it": "Ultima Revisione Regole 01/02/2023",
+			"en": "Last Rule Revision dated 01/02/2023"
+		},
+		{
+			"Keys": "RULE_GameTimeSession",
+			"it": "Session Time",
+			"en": "Session Time"
+		},
+		{
+			"Keys": "INFO_WinUpTo",
+			"it": "vinci fino a",
+			"en": "win up to"
+		},
+		{
+			"Keys": "INFO_Multiplier",
+			"it": "10 000",
+			"en": "10 000"
+		},
+		{
+			"Keys": "INFO_TimesBet",
+			"it": "x Bet",
+			"en": "x Bet"
+		},
+		{
+			"Keys": "INFO_SymFS",
+			"it": "3 simboli FREE SPIN attivano la fase Free Spin assegnando 3 giri gratis",
+			"en": "3 FREE SPIN symbols activate the Free Spin mode with 3 free spin"
+		},
+		{
+			"Keys": "INFO_SymWild",
+			"it": "Il simbolo WILD sostituisce qualsiasi altro simbolo eccetto i simboli SCATTER e LAMPADA",
+			"en": "The WILD symbols substitutes all other symbols except for the SCATTER and LAMP symbols"
+		},
+		{
+			"Keys": "INFO_SymLAMP",
+			"it": "Il simbolo LAMPADA può dare premi in base alla sua quantità presente sui rulli",
+			"en": "A prize can be rewarded based on the number of LAMP symbols showed up on reels"
+		},
+		{
+			"Keys": "INFO_P2_title",
+			"it": "Bonus Tesoro",
+			"en": "Bonus Treasure"
+		},
+		{
+			"Keys": "INFO_P2_rule_1",
+			"it": "Questo è il simbolo LAMPADA è può comparire su tutti i rulli.",
+			"en": "This is the LAMP symbol and can appears on all reels"
+		},
+		{
+			"Keys": "INFO_P2_rule_2",
+			"it": "A seconda del numero di simboli LAMPADA presenti a schermo, può essere assegnata una vincita, come descritta nell'infografica.",
+			"en": "Depending on the number of LAMP symbols showed up on reels, a reward can be given, as described in the infographic."
+		},
+		{
+			"Keys": "INFO_FreeSpins",
+			"it": "Free Spins",
+			"en": "Free Spins"
+		},
+		{
+			"Keys": "INFO_FS_Description_1",
+			"it": "3 simboli SCATTER avviano la fase FREE SPIN.",
+			"en": "3 SCATTER symbols activate the Free Spin mode."
+		},
+		{
+			"Keys": "INFO_FS_Description_2",
+			"it": "Questa fase inizia con 3 giri gratuiti. Ogni volta che compare un nuovo simbolo LAMPADA il contatore dei giri gratuiti viene riportato a 3.",
+			"en": "3 free spin will be granted. Whenever a new LAMP symbol appears the free spin counter will be resetted to 3."
+		},
+		{
+			"Keys": "INFO_FS_Description_3",
+			"it": "I simboli LAMPADA sono adesivi fino al termine dei giri gratuiti, alla fine di essi viene assegnata una vincita corrispettiva al numero di LAMPADE presenti, come descritto nell'infografica.",
+			"en": "For the duration of the Free Spin mode the LAMP symbols are sticky. When the Free Spin mode end a reward will be given according to the infographic."
+		},
+		{
+			"Keys": "INFO_NumberWays",
+			"it": "15",
+			"en": "15"
+		},
+		{
+			"Keys": "INFO_WaysToWin",
+			"it": "Linee di pagamento",
+			"en": "PayLines"
+		},
+		{
+			"Keys": "INFO_Paytable",
+			"it": "Tabella Pagamenti",
+			"en": "Paytables"
+		},
+		{
+			"Keys": "INFO_Rules",
+			"it": "Regole",
+			"en": "Rules"
+		},
+		{
+			"Keys": "INFO_History",
+			"it": "Storico Giocate",
+			"en": "Game History"
+		},
+		{
+			"Keys": "INSTR_UpTo",
+			"it": "Vinci fino a ",
+			"en": "Win up to "
+		},
+		{
+			"Keys": "INSTR_NumberWays",
+			"it": "15",
+			"en": "15"
+		},
+		{
+			"Keys": "INSTR_WaysToWin",
+			"it": "modi per",
+			"en": "way to"
+		},
+		{
+			"Keys": "INSTR_ToWin",
+			"it": "Vincere",
+			"en": "Win"
+		},
+		{
+			"Keys": "INSTR_FreeSpin",
+			"it": "Free Spin",
+			"en": "Free Spin"
+		},
+		{
+			"Keys": "INTRO_P2",
+			"it": "Giri gratuiti con funzione di reset",
+			"en": "Free Spin with reset function"	
+		},
+		{
+			"Keys": "INTRO_P3",
+			"it": "Giri gratuiti con LAMPADA adesiva",
+			"en": "Free Spin with sticky LAMPS"	
+		}
+	],
+	"rules": [
+		"RULE_0",
+		"RULE_1",
+		"RULE_2",
+		"RULE_3",
+		"RULE_4",
+		"RULE_5",
+		"RULE_6",
+		"RULE_7",
+		"RULE_8",
+		"RULE_9",
+		"RULE_10",
+		"RULE_11",
+		"RULE_12",
+		"RULE_13",
+		"RULE_14",
+		"RULE_15",
+		"RULE_16",
+		"RULE_17",
+		"RULE_18",
+		"RULE_19",
+		"RULE_20",
+		"RULE_Version",
+		"RULE_Date"
+	],
+	"cert": {
+		"show_losing_choices": true,
+		"rtp_explicit": true,
+		"celebration_threshold": 0,
+		"slam_enabled": true,
+
+		"game_name": true,
+		"game_time": true,
+		"game_time_session": true,
+		"game_date": true,
+		"game_netprofit": false,
+		"game_history_count": 5,
+
+		"autoplay_enabled": true,
+		"autoplay_values": [1, 2, 5, 10, 20, 50, 100, 250, 500, 1000000000000],
+
+		"afk_values": [5, 10, 15, 30, 600000000],
+		"reality_values": [5, 10, 15, 30, 60, 1200000000],
+
+		"cycle_timer": 1,
+		"cycle_endtimer": 0,
+
+		"bet": [0.1, 0.2, 0.5, 0.7, 0.9, 1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 7.5, 10]
+	}
+}

@@ -1,16 +1,31 @@
 {
-  "name": "jenkinstest",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+    "name": "pirates-fortune",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/ServiceStart.js",
+    "scripts": {
+        "start": "npm run production",
+        "clean": "rimraf package-lock.json && rimraf dist/ && rimraf *.tgz && rimraf node_modules/ ",
+        "compile": "rimraf dist/ && tsc",
+        "update": "npm install && ncu -u && npm run clean && npm install && npm run compile",
+        "production": "node dist/ServiceStart.js --production",
+        "test": "npm run compile && node dist/ServiceStart.js --production",
+        "dev_test": "npm run compile && nodemon src/ServiceStart.ts",
+        "emulator": "node --expose-gc --max-old-space-size=24000 dist/emulator/EmulatorStart.js --production",
+        "dev_emulator": "npm run compile && nodemon src/emulator/EmulatorStart.ts",
+        "threading": "npm run compile && node --expose-gc --max-old-space-size=24000 dist/threading/ThreadingStart.js --production",
+        "dev_threading": "npm run compile && nodemon src/threading/ThreadingStart.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "evg-service-base": "git+http://HeroKato:Conquer_evg00@87.27.41.104:5000/evg-service-base.git"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.20",
+        "rimraf": "^4.1.2",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.5"
+    }
 }
