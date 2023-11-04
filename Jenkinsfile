@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    registry = "herokato/test-node"
+    registry = "herokatodev/test-node"
     registryCredential = 'docker-login'
     dockerImage = ''
     }
