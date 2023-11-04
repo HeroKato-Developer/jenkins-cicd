@@ -1,7 +1,7 @@
 FROM alpine
 ARG CACHEBUST=1 
 
-RUN apk add --update nodejs npm curl
+RUN apk add --update nodejs npm curl git
 
 WORKDIR /opt
 RUN rm -rf ./*
@@ -11,7 +11,7 @@ RUN rm -rf ./*
 # COPY ./version.env /mnt/version.env
 
 WORKDIR /mnt/math
-COPY package*.json ./
+COPY package.json ./
 RUN npm install
 COPY . . 
 
