@@ -15,12 +15,12 @@ pipeline {
             //     }
             // }
 
-          stage('Build') {            
-            steps {
-                    sh 'node --version'
-                    sh 'npm install' 
-                }
-            }
+          // stage('Build') {            
+          //   steps {
+          //           sh 'node --version'
+          //           sh 'npm install' 
+          //       }
+          //   }
 
             stage('Building Docker Image') {
                 steps {
