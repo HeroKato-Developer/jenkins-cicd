@@ -53,12 +53,21 @@ pipeline {
                 }
             }
 
-            stage('Kubernetes') {
-                // agent any
-                steps{
-                  sh "kubectl delete -f ./kubernetes/deploy.yaml"
-                  sh "kubectl apply -f ./kubernetes/deploy.yaml"
+            stage('Deploying React.js container to Kubernetes') {
+              steps {
+                script {
+                  kubernetesDeploy(configs: "./kubernetes/deploy.yaml")
                 }
+              }
             }
+            
+            // stage('Kubernetes') {
+            //     // agent any
+            //     steps{
+            //       sh "kubectl delete -f ./kubernetes/deploy.yaml"
+            //       sh "kubectl apply -f ./kubernetes/deploy.yaml"
+            //     }
+            // }
         }
     }
+
