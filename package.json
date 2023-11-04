@@ -20,7 +20,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "evg-service-base": "git+http://HeroKato:Conquer_evg00@87.27.41.104:5000/evg-service-base.git"
+        "evg-service-base": "git+http://HeroKato:Conquer_evg00@87.27.41.104:5000/HeroKato/evg-service-base.git"
     },
     "devDependencies": {
         "nodemon": "^2.0.20",
