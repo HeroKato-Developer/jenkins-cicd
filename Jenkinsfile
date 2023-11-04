@@ -52,5 +52,13 @@ pipeline {
                   sh "docker rmi --force $registry:latest"
                 }
             }
+
+            stage('Kubernetes') {
+                // agent any
+                steps{
+                  sh "kubectl delete -f ./kubernetes/deploy.yaml"
+                  sh "kubectl apply -f ./kubernetes/deploy.yaml"
+                }
+            }
         }
     }
